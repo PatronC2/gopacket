@@ -323,41 +323,6 @@ func parseGUID(s string) []byte {
 	return result
 }
 
-func writePartialAttrSet(buf *bytes.Buffer) {
-	// PARTIAL_ATTR_VECTOR_V1_EXT is a conformant structure in NDR
-	// rgPartialAttr is [size_is(cAttrs)]
-	// Per NDR rules:
-	// 1. Conformance (MaxCount for rgPartialAttr) comes first
-	// 2. Then structure fields
-
-	// Attributes we want for password dumping
-	attrs := []uint32{
-		DRSUAPI_ATTID_objectSid,
-		DRSUAPI_ATTID_sAMAccountName,
-		DRSUAPI_ATTID_unicodePwd,
-		DRSUAPI_ATTID_ntPwdHistory,
-		DRSUAPI_ATTID_dBCSPwd,
-		DRSUAPI_ATTID_lmPwdHistory,
-		DRSUAPI_ATTID_supplementalCredentials,
-		DRSUAPI_ATTID_userAccountControl,
-		DRSUAPI_ATTID_objectGUID,
-		DRSUAPI_ATTID_pwdLastSet,
-	}
-
-	// NDR conformance first
-	binary.Write(buf, binary.LittleEndian, uint32(len(attrs))) // MaxCount for rgPartialAttr
-
-	// Structure fields
-	binary.Write(buf, binary.LittleEndian, uint32(1))          // dwVersion
-	binary.Write(buf, binary.LittleEndian, uint32(0))          // dwReserved1
-	binary.Write(buf, binary.LittleEndian, uint32(len(attrs))) // cAttrs
-
-	// Array data
-	for _, attr := range attrs {
-		binary.Write(buf, binary.LittleEndian, attr)
-	}
-}
-
 func parseGetNCChangesResponse(resp []byte, sessionKey []byte) (*GetNCChangesResult, error) {
 	if len(resp) < 8 {
 		return nil, fmt.Errorf("response too short")

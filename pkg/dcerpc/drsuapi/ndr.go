@@ -208,6 +208,27 @@ func (d *Decoder) ReadPointer() uint32 { return d.ReadUint32() }
 // 4-byte aligned).
 func (d *Decoder) ReadConformance() uint32 { return d.ReadUint32() }
 
+// CheckBounds validates that count elements of elemSize bytes can fit in
+// the remaining wire buffer. If not, it Fails the decoder (so subsequent
+// reads return zero values) and returns false. Use this before any
+// allocation or Skip whose size is driven by a wire-supplied count, so a
+// malformed reply with a tiny payload and a huge embedded count can't
+// trigger a multi-MB speculative make for bytes that don't actually exist
+// on the wire. The product is computed in uint64 so it stays safe on
+// 32-bit builds where int(count)*elemSize could otherwise overflow.
+func (d *Decoder) CheckBounds(count uint32, elemSize int, what string) bool {
+	if d.err != nil {
+		return false
+	}
+	need := uint64(count) * uint64(elemSize)
+	if need > uint64(d.Remaining()) {
+		d.Fail("ndr: %s: need %d bytes (%d * %d) but only %d remain",
+			what, need, count, elemSize, d.Remaining())
+		return false
+	}
+	return true
+}
+
 // ReadConformantVaryingHeader reads the MaxCount + Offset + ActualCount
 // prefix of a conformant-varying array. Returns (maxCount, offset,
 // actualCount). Most callers ignore offset (always 0) and use actualCount

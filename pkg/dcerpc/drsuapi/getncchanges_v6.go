@@ -37,11 +37,13 @@ import (
 	"github.com/mandiant/gopacket/pkg/utf16le"
 )
 
-// maxReasonable bounds the per-array element count any V6 parser helper is
-// willing to honour from the wire, so a malformed or hostile reply can't push
-// us into a giant allocation or a count*size product that overflows int on
-// 32-bit builds. Generous enough for any real DC.
-const maxReasonable = 10 * 1024 * 1024
+// Each helper below uses d.CheckBounds(count, elemSize, what) before
+// allocating or skipping memory whose size is taken from the wire. The
+// element sizes are fixed per call site (ATTR fixed part = 12 bytes,
+// ATTRVAL fixed part = 8 bytes, REPLENTINFLIST header = 32 bytes, etc.),
+// so a malformed reply with a huge embedded count but a small payload
+// gets rejected at parse start rather than after a multi-MB speculative
+// make of bytes that don't actually exist on the wire.
 
 // parseGetNCChangesResponseV6NDR parses the V6/V7/V9 GetNCChanges reply.
 // V6 is the canonical shape; V7 and V9 add fields after the V6 body which
@@ -135,8 +137,7 @@ func skipDSNAMEv2(d *Decoder) {
 	d.Skip(16)         // Guid
 	d.Skip(28)         // Sid
 	_ = d.ReadUint32() // NameLen
-	if maxCount > maxReasonable {
-		d.Fail("ndr: DSNAME StringName count %d exceeds cap %d", maxCount, maxReasonable)
+	if !d.CheckBounds(maxCount, 2, "DSNAME StringName") {
 		return
 	}
 	d.Skip(int(maxCount) * 2)
@@ -162,8 +163,7 @@ func readDSNAMEv2(d *Decoder, obj *ReplicatedObject) {
 		}
 	}
 	nameLen := d.ReadUint32()
-	if maxCount > maxReasonable {
-		d.Fail("ndr: DSNAME StringName count %d exceeds cap %d", maxCount, maxReasonable)
+	if !d.CheckBounds(maxCount, 2, "DSNAME StringName") {
 		return
 	}
 	if maxCount > 0 {
@@ -207,8 +207,7 @@ func skipUpToDateVectorV2(d *Decoder) {
 	if version == 2 {
 		cursorSize = 32
 	}
-	if maxCount > maxReasonable {
-		d.Fail("ndr: UPTODATE_VECTOR cursor count %d exceeds cap %d", maxCount, maxReasonable)
+	if !d.CheckBounds(maxCount, cursorSize, "UPTODATE_VECTOR cursors") {
 		return
 	}
 	d.Skip(int(maxCount) * cursorSize)
@@ -224,8 +223,8 @@ func skipUpToDateVectorV2(d *Decoder) {
 // the wire conformance keeps the cursor aligned for downstream deferreds.
 func readPrefixTableV2(d *Decoder, prefixTable map[uint32][]byte) {
 	count := d.ReadConformance() // wire authority for entry count
-	if count > maxReasonable {
-		d.Fail("ndr: PrefixTableEntry count %d exceeds cap %d", count, maxReasonable)
+	// Fixed part per PrefixTableEntry: ndx(4) + oidLen(4) + pOid ref(4) = 12.
+	if !d.CheckBounds(count, 12, "PrefixTableEntry fixed parts") {
 		return
 	}
 
@@ -249,8 +248,7 @@ func readPrefixTableV2(d *Decoder, prefixTable map[uint32][]byte) {
 			continue
 		}
 		oidMaxCount := d.ReadConformance()
-		if oidMaxCount > maxReasonable {
-			d.Fail("ndr: PrefixTableEntry.pOid count %d exceeds cap %d", oidMaxCount, maxReasonable)
+		if !d.CheckBounds(oidMaxCount, 1, "PrefixTableEntry.pOid") {
 			return
 		}
 		oidBytes := d.ReadBytes(int(oidMaxCount))
@@ -289,13 +287,12 @@ func readPrefixTableV2(d *Decoder, prefixTable map[uint32][]byte) {
 // depends on where the decoder landed after the preceding pParent UUID, which
 // is 4-aligned rather than 8-aligned.
 func skipPropertyMetaDataExtVectorV2(d *Decoder) {
-	maxCount := d.ReadUint32() // hoisted conformance, 4-aligned
+	maxCount := d.ReadConformance() // hoisted conformance, primitive 4-aligned
 	d.Align(8)                 // struct alignment before cNumProps
 	_ = d.ReadUint32()         // cNumProps
 	d.Align(8)                 // element alignment
 	const metaDataExtSize = 40
-	if maxCount > maxReasonable {
-		d.Fail("ndr: PROPERTY_META_DATA_EXT count %d exceeds cap %d", maxCount, maxReasonable)
+	if !d.CheckBounds(maxCount, metaDataExtSize, "PROPERTY_META_DATA_EXT") {
 		return
 	}
 	d.Skip(int(maxCount) * metaDataExtSize)
@@ -322,8 +319,11 @@ func readREPLENTINFLISTArrayV2(d *Decoder, sessionKey []byte, prefixTable map[ui
 		ptrMetaData   uint32
 	}
 
-	if numObjects > maxReasonable {
-		d.Fail("ndr: REPLENTINFLIST cNumObjects %d exceeds cap %d", numObjects, maxReasonable)
+	// Fixed part per REPLENTINFLIST node: pNext(4) + pName(4) + flags(4) +
+	// attrCount(4) + ptrAttr(4) + isNCPrefix(4) + ptrParentGuid(4) +
+	// ptrMetaData(4) = 32. A malformed cNumObjects must not let us
+	// pre-allocate more capacity than the wire can possibly back.
+	if !d.CheckBounds(numObjects, 32, "REPLENTINFLIST headers") {
 		return nil
 	}
 
@@ -391,8 +391,8 @@ func readATTRBLOCKv2(d *Decoder, obj *ReplicatedObject, sessionKey []byte, prefi
 	_ = prefixTable
 
 	arrayMax := d.ReadConformance()
-	if arrayMax > maxReasonable {
-		d.Fail("ndr: ATTR_ARRAY count %d exceeds cap %d", arrayMax, maxReasonable)
+	// Fixed part per ATTR: attrTyp(4) + valCount(4) + pAVal ref(4) = 12.
+	if !d.CheckBounds(arrayMax, 12, "ATTR_ARRAY fixed parts") {
 		return
 	}
 
@@ -412,8 +412,8 @@ func readATTRBLOCKv2(d *Decoder, obj *ReplicatedObject, sessionKey []byte, prefi
 			continue
 		}
 		valMax := d.ReadConformance()
-		if valMax > maxReasonable {
-			d.Fail("ndr: ATTRVAL_ARRAY count %d exceeds cap %d", valMax, maxReasonable)
+		// Fixed part per ATTRVAL: valLen(4) + pVal ref(4) = 8.
+		if !d.CheckBounds(valMax, 8, "ATTRVAL_ARRAY fixed parts") {
 			return
 		}
 		vals := make([]uint32, valMax)
@@ -426,8 +426,7 @@ func readATTRBLOCKv2(d *Decoder, obj *ReplicatedObject, sessionKey []byte, prefi
 				continue
 			}
 			byteMax := d.ReadConformance()
-			if byteMax > maxReasonable {
-				d.Fail("ndr: ATTRVAL byte count %d exceeds cap %d", byteMax, maxReasonable)
+			if !d.CheckBounds(byteMax, 1, "ATTRVAL bytes") {
 				return
 			}
 			valData := d.ReadBytes(int(byteMax))
@@ -439,19 +438,35 @@ func readATTRBLOCKv2(d *Decoder, obj *ReplicatedObject, sessionKey []byte, prefi
 	}
 }
 
-// firstRDNValue returns the value portion of the first RDN in dn (e.g.
-// "Smith, John" from "Smith\, John,OU=Foo"), honoring RFC 4514's
-// backslash-escape rule so embedded commas don't truncate the result. The
+// firstRDNValue returns the unescaped value portion of the first RDN in
+// dn (e.g. "Smith, John" from "Smith\, John,OU=Foo"), honoring RFC 4514's
+// backslash-escape rule so embedded commas don't truncate the result and
+// the escape character itself is dropped from the returned value. The
 // caller has already stripped the "CN=" prefix.
+//
+// Only the single-char form (\<char>) is unescaped, which is what AD
+// emits in practice for the SAM-name extraction path. The two-char hex
+// form (\HH) is rare here and is intentionally not decoded — the leading
+// hex digit is kept literally, matching the previous one-byte skip
+// behavior so we don't accidentally hand callers a different RDN value.
 func firstRDNValue(dn string) string {
+	var b strings.Builder
+	b.Grow(len(dn))
 	for i := 0; i < len(dn); i++ {
-		if dn[i] == '\\' {
-			i++ // skip the escaped char (i++ in the loop header advances past it)
+		c := dn[i]
+		if c == '\\' {
+			if i+1 < len(dn) {
+				b.WriteByte(dn[i+1])
+				i++
+			}
+			// A trailing backslash is a malformed escape per RFC 4514;
+			// drop it silently rather than emitting a literal '\'.
 			continue
 		}
-		if dn[i] == ',' {
-			return dn[:i]
+		if c == ',' {
+			return b.String()
 		}
+		b.WriteByte(c)
 	}
-	return dn
+	return b.String()
 }
