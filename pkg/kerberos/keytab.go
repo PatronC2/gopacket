@@ -22,8 +22,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/etypeID"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/keytab"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/etypeID"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/keytab"
 )
 
 // BuildKeytabFromNTHash creates a keytab from an NTLM hash for pass-the-hash attacks.

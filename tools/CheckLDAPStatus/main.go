@@ -25,9 +25,9 @@ import (
 	"time"
 
 	goldap "github.com/go-ldap/ldap/v3"
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/flags"
-	"github.com/mandiant/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/transport"
 )
 
 var (

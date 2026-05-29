@@ -34,7 +34,7 @@ import (
 	"encoding/binary"
 	"strings"
 
-	"github.com/mandiant/gopacket/pkg/utf16le"
+	"github.com/PatronC2/gopacket/pkg/utf16le"
 )
 
 // Each helper below uses d.CheckBounds(count, elemSize, what) before

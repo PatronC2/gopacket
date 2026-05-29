@@ -10,16 +10,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/config"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/credentials"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/etype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/errorcode"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/nametype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/keytab"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/krberror"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/messages"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/config"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/credentials"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/etype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/errorcode"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/nametype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/keytab"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/krberror"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/messages"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 // KDCDialer is the interface a caller must satisfy to direct all KDC traffic

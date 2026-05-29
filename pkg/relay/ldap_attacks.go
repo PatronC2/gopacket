@@ -29,9 +29,9 @@ import (
 
 	goldap "github.com/go-ldap/ldap/v3"
 
-	"github.com/mandiant/gopacket/internal/build"
-	gopacketldap "github.com/mandiant/gopacket/pkg/ldap"
-	"github.com/mandiant/gopacket/pkg/security"
+	"github.com/PatronC2/gopacket/internal/build"
+	gopacketldap "github.com/PatronC2/gopacket/pkg/ldap"
+	"github.com/PatronC2/gopacket/pkg/security"
 )
 
 // Package-level tracking to match Impacket's global state

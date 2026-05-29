@@ -16,7 +16,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2"
 
 	"testing"
 )

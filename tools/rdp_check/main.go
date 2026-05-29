@@ -25,10 +25,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/mandiant/gopacket/pkg/flags"
-	"github.com/mandiant/gopacket/pkg/ntlm"
-	"github.com/mandiant/gopacket/pkg/session"
-	"github.com/mandiant/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/ntlm"
+	"github.com/PatronC2/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/pkg/transport"
 )
 
 // tsRequest represents a CredSSP TSRequest structure (MS-CSSP 2.2.1).

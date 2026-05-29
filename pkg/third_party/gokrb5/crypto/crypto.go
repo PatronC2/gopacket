@@ -5,11 +5,11 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/etype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/chksumtype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/etypeID"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/patype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/etype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/chksumtype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/etypeID"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/patype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 // GetEtype returns an instances of the required etype struct for the etype ID.

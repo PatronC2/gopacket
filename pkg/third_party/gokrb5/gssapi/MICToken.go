@@ -8,9 +8,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/keyusage"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/keyusage"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 // RFC 4121, section 4.2.6.1

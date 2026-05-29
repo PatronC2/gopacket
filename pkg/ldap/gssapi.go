@@ -21,10 +21,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/gssapi"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/keyusage"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
-	"github.com/mandiant/gopacket/pkg/kerberos"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/gssapi"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/keyusage"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/kerberos"
 )
 
 var debugGSSAPI = os.Getenv("DEBUG_GSSAPI") != ""

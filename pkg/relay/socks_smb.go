@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mandiant/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/internal/build"
 )
 
 // SMB2 flags used by the SOCKS plugin

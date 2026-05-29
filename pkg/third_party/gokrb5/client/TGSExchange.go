@@ -1,11 +1,11 @@
 package client
 
 import (
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/flags"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/nametype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/krberror"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/messages"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/flags"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/nametype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/krberror"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/messages"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 // TGSREQGenerateAndExchange generates the TGS_REQ and performs a TGS exchange to retrieve a ticket to the specified SPN.

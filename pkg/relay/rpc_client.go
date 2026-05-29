@@ -21,12 +21,12 @@ import (
 	"log"
 	"net"
 
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/dcerpc"
-	"github.com/mandiant/gopacket/pkg/dcerpc/epmapper"
-	"github.com/mandiant/gopacket/pkg/dcerpc/header"
-	"github.com/mandiant/gopacket/pkg/dcerpc/tsch"
-	"github.com/mandiant/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/dcerpc"
+	"github.com/PatronC2/gopacket/pkg/dcerpc/epmapper"
+	"github.com/PatronC2/gopacket/pkg/dcerpc/header"
+	"github.com/PatronC2/gopacket/pkg/dcerpc/tsch"
+	"github.com/PatronC2/gopacket/pkg/transport"
 )
 
 // ICPR interface UUID: 91ae6020-9e3c-11cf-8d7c-00aa00c091be v0.0

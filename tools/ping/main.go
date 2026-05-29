@@ -21,7 +21,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/mandiant/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/flags"
 	"golang.org/x/net/icmp"
 	"golang.org/x/net/ipv4"
 )

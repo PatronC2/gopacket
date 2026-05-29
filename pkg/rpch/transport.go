@@ -29,8 +29,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/transport"
 )
 
 // Transport implements RPC over HTTP v2 transport

@@ -22,8 +22,8 @@ import (
 	"math/rand"
 	"unicode/utf16"
 
-	"github.com/mandiant/gopacket/pkg/dcerpc"
-	"github.com/mandiant/gopacket/pkg/dcerpc/svcctl"
+	"github.com/PatronC2/gopacket/pkg/dcerpc"
+	"github.com/PatronC2/gopacket/pkg/dcerpc/svcctl"
 )
 
 // getAttackModule returns the attack module for the given name.

@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2/internal/utf16le"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/utf16le"
 )
 
 var le = binary.LittleEndian

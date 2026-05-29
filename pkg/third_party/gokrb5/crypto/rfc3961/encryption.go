@@ -9,8 +9,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/common"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/etype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/common"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/etype"
 )
 
 // DES3EncryptData encrypts the data provided using DES3 and methods specific to the etype provided.

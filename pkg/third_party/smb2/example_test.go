@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"net"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2"
 )
 
 func Example() {

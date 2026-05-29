@@ -27,11 +27,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/flags"
-	"github.com/mandiant/gopacket/pkg/ntlm"
-	"github.com/mandiant/gopacket/pkg/transport"
-	"github.com/mandiant/gopacket/pkg/utf16le"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/ntlm"
+	"github.com/PatronC2/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/pkg/utf16le"
 )
 
 // SMB Constants

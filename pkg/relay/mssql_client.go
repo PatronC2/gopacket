@@ -21,8 +21,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/tds"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/tds"
 )
 
 // MSSQLRelayClient relays NTLM authentication to a MSSQL target via TDS protocol.

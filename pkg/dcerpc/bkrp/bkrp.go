@@ -21,7 +21,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/mandiant/gopacket/pkg/dcerpc"
+	"github.com/PatronC2/gopacket/pkg/dcerpc"
 )
 
 // BKRP Interface UUID: 3dde7c30-165d-11d1-ab8f-00805f14db40

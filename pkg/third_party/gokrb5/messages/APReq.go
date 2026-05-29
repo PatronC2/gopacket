@@ -5,16 +5,16 @@ import (
 	"time"
 
 	"github.com/jcmturner/gofork/encoding/asn1"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/asn1tools"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/asnAppTag"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/errorcode"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/keyusage"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/msgtype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/keytab"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/krberror"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/asn1tools"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/asnAppTag"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/errorcode"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/keyusage"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/msgtype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/keytab"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/krberror"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 type marshalAPReq struct {

@@ -18,7 +18,7 @@ import (
 	"errors"
 	"os"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2"
 )
 
 // NTSTATUS values from [MS-ERREF]. The smb2 erref package is internal, so we

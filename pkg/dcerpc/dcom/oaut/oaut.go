@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"unicode/utf16"
 
-	"github.com/mandiant/gopacket/pkg/dcerpc"
-	"github.com/mandiant/gopacket/pkg/dcerpc/dcom"
+	"github.com/PatronC2/gopacket/pkg/dcerpc"
+	"github.com/PatronC2/gopacket/pkg/dcerpc/dcom"
 )
 
 // IDispatch UUID

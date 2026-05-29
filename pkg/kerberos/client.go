@@ -25,16 +25,16 @@ import (
 	"os"
 	"strings"
 
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/session"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/client"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/config"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/credentials"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/gssapi"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/keytab"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/messages"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
-	"github.com/mandiant/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/client"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/config"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/credentials"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/gssapi"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/keytab"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/messages"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/transport"
 )
 
 // TransportKDCDialer routes every KDC connection (AS, TGS, kpasswd) through

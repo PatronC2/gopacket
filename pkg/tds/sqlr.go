@@ -19,7 +19,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mandiant/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/pkg/transport"
 )
 
 // SQLRInstance represents a discovered SQL Server instance
