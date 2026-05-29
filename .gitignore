@@ -20,6 +20,8 @@
 !/go.sum
 !/install.sh
 !/internal
+!/lib
+!/lib/**
 !/pkg
 !/tools
 
