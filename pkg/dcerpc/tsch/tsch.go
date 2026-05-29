@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"unicode/utf16"
 
-	"github.com/mandiant/gopacket/pkg/dcerpc"
+	"github.com/PatronC2/gopacket/pkg/dcerpc"
 )
 
 // MS-TSCH (Task Scheduler Service Remote Protocol)

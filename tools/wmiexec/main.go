@@ -55,11 +55,11 @@ import (
 	_ "github.com/oiweiwei/go-msrpc/msrpc/erref/win32"
 	_ "github.com/oiweiwei/go-msrpc/msrpc/erref/wmi"
 
-	"github.com/mandiant/gopacket/pkg/flags"
-	"github.com/mandiant/gopacket/pkg/kerberos"
-	"github.com/mandiant/gopacket/pkg/session"
-	"github.com/mandiant/gopacket/pkg/smb"
-	"github.com/mandiant/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/kerberos"
+	"github.com/PatronC2/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/pkg/smb"
+	"github.com/PatronC2/gopacket/pkg/transport"
 )
 
 var (

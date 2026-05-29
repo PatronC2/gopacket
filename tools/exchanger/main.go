@@ -41,10 +41,10 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/mapi"
-	"github.com/mandiant/gopacket/pkg/nspi"
-	"github.com/mandiant/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/mapi"
+	"github.com/PatronC2/gopacket/pkg/nspi"
+	"github.com/PatronC2/gopacket/pkg/session"
 )
 
 const VERSION = "1.0.0"

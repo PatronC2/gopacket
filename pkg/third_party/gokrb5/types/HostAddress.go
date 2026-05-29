@@ -9,7 +9,7 @@ import (
 	"net"
 
 	"github.com/jcmturner/gofork/encoding/asn1"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/addrtype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/addrtype"
 )
 
 // HostAddresses implements RFC 4120 type: https://tools.ietf.org/html/rfc4120#section-5.2.5

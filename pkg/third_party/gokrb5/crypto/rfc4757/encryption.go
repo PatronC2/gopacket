@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/etype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/etype"
 )
 
 // EncryptData encrypts the data provided using methods specific to the etype provided as defined in RFC 4757.

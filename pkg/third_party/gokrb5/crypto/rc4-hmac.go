@@ -7,10 +7,10 @@ import (
 	"hash"
 	"io"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/rfc3961"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/rfc4757"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/chksumtype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/etypeID"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/rfc3961"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/rfc4757"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/chksumtype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/etypeID"
 	"golang.org/x/crypto/md4"
 )
 

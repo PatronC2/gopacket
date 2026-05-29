@@ -25,7 +25,7 @@ import (
 
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"
-	"github.com/mandiant/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/flags"
 )
 
 // Protocol name to number mapping

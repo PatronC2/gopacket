@@ -9,7 +9,7 @@ import (
 
 	"testing"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2/internal/utf16le"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/utf16le"
 )
 
 func TestNtowfv2(t *testing.T) {

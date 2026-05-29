@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2"
 )
 
 // PipeAccess specifies the access mode for named pipes

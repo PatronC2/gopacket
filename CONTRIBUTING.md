@@ -33,11 +33,11 @@ SIDs, and anything that could be tied back to a real engagement. Replacing
 `corp.internal` with `example.local` is fine — keep the structure, just
 not the identifying values. **If in doubt, redact it.**
 
-[Open a bug report](https://github.com/mandiant/gopacket/issues/new)
+[Open a bug report](https://github.com/PatronC2/gopacket/issues/new)
 
 ## Feature Requests
 
-Open a [GitHub issue](https://github.com/mandiant/gopacket/issues/new)
+Open a [GitHub issue](https://github.com/PatronC2/gopacket/issues/new)
 describing the use case and the Impacket equivalent (if any). If the feature
 is on the "Missing Features" list in the README, mention which one — it
 helps us prioritize.
@@ -88,7 +88,7 @@ If you find a security vulnerability **in gopacket itself** (not a protocol
 limitation), please report it responsibly. Do **not** open a public GitHub
 issue. Instead, use GitHub's private vulnerability reporting:
 
-https://github.com/mandiant/gopacket/security/advisories/new
+https://github.com/PatronC2/gopacket/security/advisories/new
 
 ## License
 

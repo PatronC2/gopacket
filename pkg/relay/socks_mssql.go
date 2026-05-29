@@ -23,7 +23,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/mandiant/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/internal/build"
 )
 
 // TDS packet type constants

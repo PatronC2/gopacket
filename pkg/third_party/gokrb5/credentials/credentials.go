@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/hashicorp/go-uuid"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/nametype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/keytab"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/nametype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/keytab"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 const (

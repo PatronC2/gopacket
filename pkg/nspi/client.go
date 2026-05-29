@@ -23,10 +23,10 @@ import (
 	"strings"
 	"unicode/utf16"
 
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/mapi"
-	"github.com/mandiant/gopacket/pkg/rpch"
-	"github.com/mandiant/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/mapi"
+	"github.com/PatronC2/gopacket/pkg/rpch"
+	"github.com/PatronC2/gopacket/pkg/session"
 
 	"github.com/google/uuid"
 )

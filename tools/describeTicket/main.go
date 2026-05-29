@@ -24,15 +24,15 @@ import (
 	"time"
 
 	gokrbasn1 "github.com/jcmturner/gofork/encoding/asn1"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/credentials"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/etypeID"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/flags"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/messages"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/credentials"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/etypeID"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/flags"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/messages"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 
-	gopflags "github.com/mandiant/gopacket/pkg/flags"
-	"github.com/mandiant/gopacket/pkg/kerberos"
+	gopflags "github.com/PatronC2/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/kerberos"
 )
 
 // ASN.1 structures for decrypting ticket enc-part (from ticketer.go)

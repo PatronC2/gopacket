@@ -25,11 +25,11 @@ import (
 	"time"
 	"unicode/utf16"
 
-	"github.com/mandiant/gopacket/pkg/dcerpc/gkdi"
-	"github.com/mandiant/gopacket/pkg/dpaping"
-	"github.com/mandiant/gopacket/pkg/flags"
-	"github.com/mandiant/gopacket/pkg/ldap"
-	"github.com/mandiant/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/pkg/dcerpc/gkdi"
+	"github.com/PatronC2/gopacket/pkg/dpaping"
+	"github.com/PatronC2/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/ldap"
+	"github.com/PatronC2/gopacket/pkg/session"
 )
 
 var (

@@ -19,7 +19,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/mandiant/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/internal/build"
 )
 
 // socksServer is the global SOCKS server instance (set if -socks enabled).

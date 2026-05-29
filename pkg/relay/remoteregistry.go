@@ -11,8 +11,8 @@ package relay
 import (
 	"log"
 
-	"github.com/mandiant/gopacket/pkg/dcerpc"
-	"github.com/mandiant/gopacket/pkg/dcerpc/svcctl"
+	"github.com/PatronC2/gopacket/pkg/dcerpc"
+	"github.com/PatronC2/gopacket/pkg/dcerpc/svcctl"
 )
 
 // remoteRegistryState captures what ensureRemoteRegistryStarted changed on

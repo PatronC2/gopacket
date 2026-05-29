@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2/internal/utf16le"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/utf16le"
 )
 
 // NTLM v2 client

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	. "github.com/mandiant/gopacket/pkg/third_party/smb2/internal/erref"
+	. "github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/erref"
 )
 
 // TransportError represents a error come from net.Conn layer.

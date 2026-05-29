@@ -6,11 +6,11 @@ import (
 	"crypto/sha1"
 	"hash"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/common"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/rfc3961"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/rfc3962"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/chksumtype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/etypeID"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/common"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/rfc3961"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/rfc3962"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/chksumtype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/etypeID"
 )
 
 // RFC 3962

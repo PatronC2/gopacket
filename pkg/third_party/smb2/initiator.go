@@ -3,8 +3,8 @@ package smb2
 import (
 	"encoding/asn1"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2/internal/ntlm"
-	"github.com/mandiant/gopacket/pkg/third_party/smb2/internal/spnego"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/ntlm"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/spnego"
 )
 
 type Initiator interface {

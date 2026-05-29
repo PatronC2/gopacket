@@ -3,7 +3,7 @@ package pac
 import (
 	"bytes"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/chksumtype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/chksumtype"
 	"github.com/jcmturner/rpc/v2/mstypes"
 )
 

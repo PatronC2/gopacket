@@ -22,7 +22,7 @@ import (
 	"time"
 	"unicode/utf16"
 
-	"github.com/mandiant/gopacket/pkg/dcerpc"
+	"github.com/PatronC2/gopacket/pkg/dcerpc"
 )
 
 // MS-TSTS Terminal Services Terminal Server Runtime Interface Protocol

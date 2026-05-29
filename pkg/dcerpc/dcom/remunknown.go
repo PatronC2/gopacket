@@ -19,7 +19,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/mandiant/gopacket/pkg/dcerpc"
+	"github.com/PatronC2/gopacket/pkg/dcerpc"
 )
 
 // IRemUnknown operation numbers

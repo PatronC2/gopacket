@@ -18,12 +18,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mandiant/gopacket/pkg/transport"
+	"github.com/PatronC2/gopacket/pkg/transport"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/config"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/nametype"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/messages"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/config"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/nametype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/messages"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 // GetASREP fetches the AS-REP for a user and returns the hash.

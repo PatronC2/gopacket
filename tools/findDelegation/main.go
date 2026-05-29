@@ -20,9 +20,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/mandiant/gopacket/pkg/flags"
-	"github.com/mandiant/gopacket/pkg/ldap"
-	"github.com/mandiant/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/ldap"
+	"github.com/PatronC2/gopacket/pkg/session"
 )
 
 var (

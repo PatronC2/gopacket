@@ -12,11 +12,11 @@ import (
 	"fmt"
 	"hash"
 
-	"github.com/mandiant/gopacket/pkg/third_party/smb2/internal/crypto/ccm"
-	"github.com/mandiant/gopacket/pkg/third_party/smb2/internal/crypto/cmac"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/crypto/ccm"
+	"github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/crypto/cmac"
 
-	. "github.com/mandiant/gopacket/pkg/third_party/smb2/internal/erref"
-	. "github.com/mandiant/gopacket/pkg/third_party/smb2/internal/smb2"
+	. "github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/erref"
+	. "github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/smb2"
 )
 
 func sessionSetup(conn *conn, i Initiator, ctx context.Context) (*session, error) {

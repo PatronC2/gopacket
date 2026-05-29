@@ -9,7 +9,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto/etype"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto/etype"
 )
 
 // ZeroPad pads bytes with zeros to nearest multiple of message size m.

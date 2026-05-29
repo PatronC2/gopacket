@@ -22,10 +22,10 @@ import (
 	"time"
 
 	"github.com/jcmturner/gofork/encoding/asn1"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/credentials"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/iana/asnAppTag"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/messages"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/credentials"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/iana/asnAppTag"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/messages"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 // ASN.1 marshal structs for KRB-CRED (gokrb5 lacks Marshal support)

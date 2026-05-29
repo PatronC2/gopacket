@@ -32,9 +32,9 @@ import (
 	"github.com/oiweiwei/gokrb5.fork/v9/credentials"
 	"github.com/oiweiwei/gokrb5.fork/v9/iana/flags"
 
-	"github.com/mandiant/gopacket/internal/build"
-	"github.com/mandiant/gopacket/pkg/kerberos"
-	"github.com/mandiant/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/internal/build"
+	"github.com/PatronC2/gopacket/pkg/kerberos"
+	"github.com/PatronC2/gopacket/pkg/session"
 )
 
 // KerberosAuthHandler manages Kerberos authentication for RPC using go-msrpc.

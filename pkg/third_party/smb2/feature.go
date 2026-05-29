@@ -1,7 +1,7 @@
 package smb2
 
 import (
-	. "github.com/mandiant/gopacket/pkg/third_party/smb2/internal/smb2"
+	. "github.com/PatronC2/gopacket/pkg/third_party/smb2/internal/smb2"
 )
 
 // client

@@ -13,8 +13,8 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 const (

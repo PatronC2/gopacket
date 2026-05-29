@@ -24,7 +24,7 @@ import (
 	"github.com/google/gopacket/layers"
 	"github.com/google/gopacket/pcap"
 	"github.com/google/gopacket/pcapgo"
-	"github.com/mandiant/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/flags"
 )
 
 // Supported datalink types

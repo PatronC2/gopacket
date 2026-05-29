@@ -2,10 +2,10 @@
 package kadmin
 
 import (
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/crypto"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/krberror"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/messages"
-	"github.com/mandiant/gopacket/pkg/third_party/gokrb5/types"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/crypto"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/krberror"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/messages"
+	"github.com/PatronC2/gopacket/pkg/third_party/gokrb5/types"
 )
 
 // ChangePasswdMsg generate a change password request and also return the key needed to decrypt the reply.

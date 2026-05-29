@@ -24,10 +24,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mandiant/gopacket/pkg/flags"
-	"github.com/mandiant/gopacket/pkg/ldap"
-	"github.com/mandiant/gopacket/pkg/security"
-	"github.com/mandiant/gopacket/pkg/session"
+	"github.com/PatronC2/gopacket/pkg/flags"
+	"github.com/PatronC2/gopacket/pkg/ldap"
+	"github.com/PatronC2/gopacket/pkg/security"
+	"github.com/PatronC2/gopacket/pkg/session"
 
 	goldap "github.com/go-ldap/ldap/v3"
 )
