@@ -1,4 +1,4 @@
-module github.com/mandiant/gopacket
+module github.com/PatronC2/gopacket
 
 go 1.24.13
 
